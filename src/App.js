@@ -20,7 +20,7 @@ function App() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          //coloca um break point pra ver o que vem no position
+         
           getApiTemp(
             `${position.coords.latitude},${position.coords.longitude}`
           );
@@ -42,7 +42,7 @@ function App() {
   };
   const getApiTemp = (city) => {
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=62b81e8437714586a18170122231601&q=${city}&lang=pt`
+      `http://api.weatherapi.com/v1/current.json?key=&q=${city}&lang=pt`
     )
       .then((response) => {
         if (response.status === 200) {
